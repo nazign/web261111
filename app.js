@@ -79,10 +79,10 @@ function sortBy(list, key, desc) {
     return copy;
 }
 // applySort : 선택 상자 값으로 정렬해서 다시 그리기(반환값 없음)
-function applySort() {
+const applySort = () => {
     const key = document.getElementById("sort").value;
     renderCards(sortBy(movies, key, key !== "title"));
-}
+};
 applySort();
 
 
