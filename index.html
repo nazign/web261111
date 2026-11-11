@@ -27,69 +27,20 @@
         <h2>요즘 내가 고른 영화 다섯 편</h2>
         <p>포스터 위에 마우스를 올려 보세요.</p>
     </section>
+
     <main>
-        <pre id="out"></pre>
+        <div class="toolbar">
+            <p id="count"></p>
+            <label for="sort">정렬</label>
+            <select id="sort" onchange="applySort()">
+                <option value="rating">평점순</option>
+                <option value="year">최신 개봉순</option>
+                <option value="title">제목순</option>
+            </select>
+        </div>
+
         <section class="board" id="board">
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w342/gDN2NWtHbs8ZWEBQM8Dh5OVXdb4.jpg
-_poster_path" alt="영화 제목 포스터">
-                <span class="badge">8.4</span>
-                <div class="info">
-                    <h2>인터스텔라</h2>
-                    <p class="year">2014</p>
-                    <p class="overview">사실적인 sf 영화</p>
-                </div>
-            </article>
-        
-            
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w342/ziReGUV3xURsWmcmsn2GOunPc0L.jpg
-_poster_path" alt="영화 제목 포스터">
-                <span class="badge">7.7</span>
-                <div class="info">
-                    <h2>아이언맨</h2>
-                    <p class="year">2008</p>
-                    <p class="overview">I am ironman의 시작</p>
-                </div>
-            </article>
-        
-            
 
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w342/uH8q40cjMAjrRHyPJMbQwAIJATb.jpg
-_poster_path" alt="영화 제목 포스터">
-                <span class="badge">7.7</span>
-                <div class="info">
-                    <h2>마션</h2>
-                    <p class="year">2015</p>
-                    <p class="overview">우주 농사</p>
-                </div>
-            </article>
-       
-            
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w342/lYceQKe3EsYn7VdDXGTy7dSwBLp.jpg
-_poster_path" alt="영화 제목 포스터">
-                <span class="badge">7.2</span>
-                <div class="info">
-                    <h2>겨울왕국</h2>
-                    <p class="year">2013</p>
-                    <p class="overview">let it go~</p>
-                </div>
-            </article>
-        
-            
-
-            <article class="card">
-                <img class="poster" src="https://image.tmdb.org/t/p/w342/hSjWT9LsyNJ9H3d1Tn9Hx02hnQD.jpg
-_poster_path" alt="영화 제목 포스터">
-                <span class="badge">7.2</span>
-                <div class="info">
-                    <h2>레미제라블</h2>
-                    <p class="year">2012</p>
-                    <p class="overview">빵 도둑 장발장</p>
-                </div>
-            </article>
         </section>
         <section id="about">
             <h2>이 보드에 대하여</h2>
@@ -104,9 +55,8 @@ _poster_path" alt="영화 제목 포스터">
 
     </footer>
     <p id="stats"></p>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
-document.getElementById("stats").textContent = "평균 " + avgText + "점";

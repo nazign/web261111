@@ -112,6 +112,18 @@ footer {
     margin: 0 auto 24px;
 }
 
+.card.hot .badge {
+    background: crimson;
+    color: #fff;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
 @media (min-width: 600px) {
     nav ul {
         flex-direction: row;
